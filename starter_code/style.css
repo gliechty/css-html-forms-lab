@@ -1,10 +1,25 @@
 /*-------- Utility Styles --------*/
 * {
 	box-sizing: border-box; 
+	font-family: 'Proza Libre', sans-serif;
 	/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
 }
+#main {
+	background-color: #e3e6ec;
+	border-radius: 10px;
+	padding: 5px 10px;
+	width: 50%;
+}
 
+#title {
+	font-size: 40px;
+	margin: 0 0 20px 0;
+	font-weight: 800;
+}
+#container-results {
+	float: right;
+}
 /* 
 	Use Google Fonts to make all of the text Proza Libre.
 

@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<section id="main">
 		<section class="formSection container">
 			<form class="form" method="GET">
-					<h1>My Dev Story</h1>
+					<h1 id="title">My Dev Story</h1>
 					<div class="row formGroup">
 					    <label for="name">Name:</label>
 					    <input id="name" name="name" >
@@ -83,6 +84,7 @@
 				    	<label for="noun-2">Noun:</label>
 				    	<input id="noun-2" name="noun-2">
 					</div>
+					<br>
 					<div class="row formGroup">
 				    	<input type="submit">
 				    </div>
@@ -100,9 +102,9 @@
 		function makeResults() {
 			var results = document.createElement('section');
 			results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
-			results.className = 'container results';
+			results.setAttribute('id', 'container-results');
 			main.appendChild(results);
-		};
+		}
 		/*
 		
 			Make a function that will create <section> element and append it to #main.
@@ -112,8 +114,14 @@
 
 		*/
 
-
 		$("form").on("submit", function(event){
+			console.log("JSS works");
+			event.preventDefault();
+			makeResults();
+			var results=document.getElementById('container-results');
+			var story = document.createElement('div');
+			story.innerHTML=("Once upon a time there was a developer named " + $('#name').val() +". " + $('#name').val()+" came to General Asssembly to " + $('#verb-1').val() + " the great mountain of programming knowledge." + $('#mission').val() + ", " + $('#name').val() + " shouted. Though " + $('.radio').val());
+			results.appendChild(story);
 
 		    // Stop the form from submitting
 
