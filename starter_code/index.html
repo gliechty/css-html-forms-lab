@@ -115,12 +115,11 @@
 		*/
 
 		$("form").on("submit", function(event){
-			console.log("JSS works");
 			event.preventDefault();
 			makeResults();
 			var results=document.getElementById('container-results');
 			var story = document.createElement('div');
-			story.innerHTML=("Once upon a time there was a developer named " + $('#name').val() +". " + $('#name').val()+" came to General Asssembly to " + $('#verb-1').val() + " the great mountain of programming knowledge." + $('#mission').val() + ", " + $('#name').val() + " shouted. Though " + $('.radio').val());
+			story.innerHTML=("Once upon a time there was a developer named " + $('#name').val() + ". " + $('#name').val()+" came to General Asssembly to " + $('#verb-1').val() + " the great mountain of programming knowledge. " + $('#mission').val()+ ", " + $('#name').val() + " shouted. Though " + $('input[name=sentiment]:checked').val() + ", " + $('#name').val() + " was able to overcome all obstacles with the power of their " + $('#noun-1').val() + ". In the end, their success can be contributed entirely to their " + $('#check1:checked').val() + ", " + $('#check2:checked').val() + ", " + $('#check3:checked').val() + " " + $('#noun-2').val() + ".");
 			results.appendChild(story);
 
 		    // Stop the form from submitting 
